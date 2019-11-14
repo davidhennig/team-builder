@@ -11,6 +11,7 @@ const Form = props => {
   const submitForm = e => {
     e.preventDefault();
     props.addNewCard(card);
+    setCard({ name: "", email: "", role: "" });
   };
   return (
     <form onSubmit={submitForm}>
@@ -40,7 +41,6 @@ const Form = props => {
         onChange={handleChanges}
         value={card.role}
       />
-
       <button type="submit">Submit</button>
     </form>
   );
